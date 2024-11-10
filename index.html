@@ -4,85 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BRUG</title>
+    <link
+      href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <style>
+      :root {
+        --brug-primary: #D42E12;
+        --brug-secondary: #BF0411;
+        --brug-dark: #262626;
+        --brug-light: #F5F5F5;
+        --brug-white: #FFFFFF;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: var(--brug-light);
         margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-      .container {
-        background: #fff;
         padding: 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+      }
+
+      /* Main Form Styles */
+      #mc_embed_signup {
+        background: var(--brug-white);
+        padding: 30px;
         border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        max-width: 400px;
-        width: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
       }
-      h1 {
+
+      #mc_embed_signup h2 {
+        color: var(--brug-dark);
         font-size: 24px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        text-align: center;
       }
-      input[type="text"],
-      input[type="email"] {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
+
+      #mc_embed_signup .mc-field-group {
+        padding-bottom: 20px;
+      }
+
+      #mc_embed_signup .mc-field-group label {
+        color: var(--brug-dark);
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+
+      #mc_embed_signup .mc-field-group input {
+        border: 2px solid #E0E0E0;
         border-radius: 4px;
+        padding: 12px;
+        font-size: 16px;
+        width: 100%;
+        transition: border-color 0.3s ease;
       }
-      button {
-        background-color: #ff4757;
-        color: white;
-        padding: 10px 20px;
+
+      #mc_embed_signup .mc-field-group input:focus {
+        border-color: var(--brug-primary);
+        outline: none;
+      }
+
+      /* Button Styles */
+      #mc_embed_signup .button {
+        background-color: var(--brug-primary);
+        color: var(--brug-white);
         border: none;
         border-radius: 4px;
-        cursor: pointer;
         font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: auto;
+        margin: 20px 0;
       }
-      button:hover {
-        background-color: #e84118;
+
+      #mc_embed_signup .button:hover {
+        background-color: var(--brug-secondary);
       }
-      @media (max-width: 600px) {
+
+      /* Response Messages */
+      #mc_embed_signup .response {
+        margin-top: 15px;
+        border-radius: 4px;
+      }
+
+      #mce-error-response {
+        background-color: #FFE8E8;
+        color: var(--brug-primary);
+      }
+
+      #mce-success-response {
+        background-color: #E8FFE8;
+        color: #28A745;
+      }
+
+      /* Mailchimp Badge */
+      .refferal_badge {
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+      }
+
+      .refferal_badge:hover {
+        opacity: 1;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
         .container {
-          padding: 10px;
+          padding: 15px;
+        }
+
+        #mc_embed_signup {
+          padding: 20px;
+        }
+
+        #mc_embed_signup h2 {
+          font-size: 20px;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>📅 BRUG Rejestracja na Wydarzenie 12 Listopad 2024 🎉</h1>
-
-      <form id="signup-form">
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-        <button type="submit">Zapisz się</button>
-      </form>
-    </div>
-
-    <div id="mc_embed_shell">
-      <link
-        href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
-        rel="stylesheet"
-        type="text/css"
-      />
-      <style type="text/css">
-        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-      </style>
       <div id="mc_embed_signup">
         <form
           action="https://plrug.us21.list-manage.com/subscribe/post?u=0728e33b320ed77b4fe555eb8&amp;id=17cfeb01f5&amp;f_id=002080e6f0"
@@ -93,19 +144,15 @@
           target="_blank"
         >
           <div id="mc_embed_signup_scroll">
-            <h2>BRUG rejestracja do newslettera</h2>
-            <div class="indicates-required">
-              <span class="asterisk">*</span> indicates required
-            </div>
+            <h2>📅 BRUG Rejestracja na<br>Newsletter 🎉</h2>
             <div class="mc-field-group">
-              <label for="mce-EMAIL"
-                >Email Address <span class="asterisk">*</span></label
-              ><input
+              <label for="mce-EMAIL">Adres Email <span class="asterisk">*</span></label>
+              <input
                 type="email"
                 name="EMAIL"
                 class="required email"
                 id="mce-EMAIL"
-                required=""
+                required
                 value=""
               />
             </div>
@@ -122,8 +169,6 @@
               ></div>
             </div>
             <div aria-hidden="true" style="position: absolute; left: -5000px">
-              /* real people should not fill this in and expect good things - do
-              not remove this or risk form bot signups */
               <input
                 type="text"
                 name="b_0728e33b320ed77b4fe555eb8_17cfeb01f5"
@@ -138,68 +183,28 @@
                   name="subscribe"
                   id="mc-embedded-subscribe"
                   class="button"
-                  value="Subscribe"
+                  value="Zapisz się"
                 />
-                <p style="margin: 0px auto">
+                <p style="margin: 20px auto 0; text-align: center;">
                   <a
                     href="http://eepurl.com/iLPjCo"
                     title="Mailchimp - email marketing made easy and fun"
-                    ><span
-                      style="
-                        display: inline-block;
-                        background-color: transparent;
-                        border-radius: 4px;
-                      "
-                      ><img
-                        class="refferal_badge"
-                        src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                        alt="Intuit Mailchimp"
-                        style="
-                          width: 220px;
-                          height: 40px;
-                          display: flex;
-                          padding: 2px 0px;
-                          justify-content: center;
-                          align-items: center;
-                        " /></span
-                  ></a>
+                  >
+                    <img
+                      class="refferal_badge"
+                      src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                      alt="Intuit Mailchimp"
+                      style="width: 220px; height: 40px;"
+                    />
+                  </a>
                 </p>
               </div>
             </div>
           </div>
         </form>
       </div>
-      <script
-        type="text/javascript"
-        src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-      ></script>
-      <script type="text/javascript">
-        (function ($) {
-          window.fnames = new Array();
-          window.ftypes = new Array();
-          fnames[0] = "EMAIL";
-          ftypes[0] = "email";
-          fnames[1] = "FNAME";
-          ftypes[1] = "text";
-          fnames[3] = "ADDRESS";
-          ftypes[3] = "address";
-          fnames[4] = "PHONE";
-          ftypes[4] = "phone";
-        })(jQuery);
-        var $mcj = jQuery.noConflict(true);
-      </script>
     </div>
 
-    <script>
-      document
-        .getElementById("signup-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const nick = document.getElementById("nick").value;
-          const email = document.getElementById("email").value;
-          alert(`Dziękujemy za rejestrację, ${nick}! 🎉`);
-          // TODO: Add your form handling logic here (e.g., send data to a server)
-        });
-    </script>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
   </body>
 </html>
